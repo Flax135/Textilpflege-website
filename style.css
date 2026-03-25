@@ -680,6 +680,128 @@ img { max-width: 100%; }
 .google-link-wrap { text-align: center; }
 
 /* ===========================
+   KONTAKT & KARTE
+=========================== */
+.kontakt-section {
+  padding: 96px 0;
+  background: var(--bg);
+}
+
+.kontakt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.kontakt-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.kontakt-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--brand);
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.kontakt-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.kontakt-list li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.kontakt-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+
+.kontakt-list strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 3px;
+}
+
+.kontakt-link {
+  color: var(--brand-light);
+  text-decoration: none;
+  font-weight: 600;
+}
+.kontakt-link:hover { text-decoration: underline; }
+
+.btn-maps {
+  width: 100%;
+  justify-content: center;
+  font-size: 14px;
+  padding: 12px 20px;
+}
+
+.map-wrapper {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+}
+
+.map-wrapper iframe { display: block; }
+
+/* Hero address pill */
+.hero-address-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.2);
+  color: rgba(255,255,255,.85);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 30px;
+  margin-top: 16px;
+  backdrop-filter: blur(8px);
+}
+
+/* Featured review */
+.review-featured {
+  border: 2px solid rgba(37,99,168,.2);
+  background: linear-gradient(135deg, #f0f5ff 0%, #fff 100%);
+  position: relative;
+}
+
+.review-verified-badge {
+  display: inline-block;
+  background: rgba(37,99,168,.1);
+  color: var(--brand-light);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.avatar-green {
+  background: linear-gradient(135deg, #059669, #34d399) !important;
+}
+
+/* ===========================
    FOOTER
 =========================== */
 .footer {
@@ -742,6 +864,7 @@ img { max-width: 100%; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
   .hermes-inner { grid-template-columns: 1fr; }
   .hermes-visual { display: flex; flex-direction: column; align-items: center; }
+  .kontakt-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -756,6 +879,7 @@ img { max-width: 100%; }
   .leistungen-grid { grid-template-columns: 1fr; }
   .reviews-grid { grid-template-columns: 1fr; }
 
+  .kontakt-grid { grid-template-columns: 1fr; }
   .oz-row { flex-direction: column; gap: 28px; }
   .oz-divider { width: 100%; height: 1px; align-self: auto; }
   .oz-card { padding: 28px 20px; }
