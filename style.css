@@ -9,7 +9,8 @@
   --brand-dark:  #0f2440;
   --accent:      #e8a020;
   --accent-dark: #c47d0a;
-  --hermes:      #e2001a;
+  --hermes:      #009FE3;
+  --hermes-dark: #0077B6;
   --bg:          #f8f7f4;
   --bg-dark:     #1a1f2e;
   --text:        #1e2a38;
@@ -296,11 +297,11 @@ img { max-width: 100%; }
   overflow: hidden;
 }
 
-/* Real photo background */
+/* Real photo background — pressed shirts on a rail (dry cleaning) */
 .hero-photo-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=1600&auto=format&fit=crop&q=80');
+  background-image: url('https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=1600&auto=format&fit=crop&q=80');
   background-size: cover;
   background-position: center;
   transform: scale(1.05);
@@ -480,7 +481,7 @@ img { max-width: 100%; }
 .trust-photo-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=1600&auto=format&fit=crop&q=80');
+  background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&auto=format&fit=crop&q=80');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -628,13 +629,31 @@ img { max-width: 100%; }
   line-height: 1.65;
 }
 
-.hermes-card { border-color: rgba(226,0,26,.15); }
-.hermes-card .card-body::before { background: linear-gradient(90deg, var(--hermes), #ff4d4d); }
+.hermes-card { border-color: rgba(0,159,227,.2); background: linear-gradient(135deg, #f0f8ff 0%, #e6f4fc 100%); }
+.hermes-card .card-body::before { background: linear-gradient(90deg, var(--hermes), #00c2f0); }
+
+/* Hermes card — blue gradient photo area instead of photo */
+.card-photo-hermes {
+  background: linear-gradient(135deg, #009FE3 0%, #0077B6 60%, #005f99 100%) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-photo-hermes::before {
+  content: 'H';
+  font-size: 72px;
+  font-weight: 900;
+  font-style: italic;
+  color: rgba(255,255,255,.25);
+  line-height: 1;
+  letter-spacing: -4px;
+}
 
 .hermes-tag {
   display: inline-block;
   background: var(--hermes);
   color: var(--white);
+  border: 1px solid rgba(0,159,227,.3);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -768,7 +787,7 @@ img { max-width: 100%; }
   right: -100px; top: -100px;
   width: 500px; height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(226,0,26,.05) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0,159,227,.07) 0%, transparent 70%);
 }
 
 .hermes-inner {
@@ -813,7 +832,7 @@ img { max-width: 100%; }
   align-items: center;
   gap: 14px;
   background: var(--white);
-  border: 2px solid rgba(226,0,26,.15);
+  border: 2px solid rgba(0,159,227,.25);
   border-radius: var(--radius-lg);
   padding: 28px 36px;
   box-shadow: var(--shadow-lg);
@@ -824,7 +843,7 @@ img { max-width: 100%; }
 .hermes-badge-large:hover {
   transform: translateY(-4px) !important;
   animation-play-state: paused;
-  box-shadow: 0 16px 48px rgba(226,0,26,.15);
+  box-shadow: 0 16px 48px rgba(0,159,227,.2);
 }
 
 .hermes-h-large {
